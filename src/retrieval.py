@@ -1,15 +1,12 @@
 from langchain_community.vectorstores import Chroma
-import ingestion
-from config import embedding_function
-
-
+from ingestion import *
 
 def retrieved_docs(query):
     vectordb = Chroma(persist_directory="db", embedding_function=embedding_function)
-    retrieved_docs = vectordb.similarity_search_with_relevance_scores(query, k=15)
-    for doc, score in retrieved_docs:
-        print(f"Relevance Score: {score:.4f}")
-        print(doc.page_content[:300])
+    results = vectordb.similarity_search_with_score(query, k=5)
+    for doc, score in results:
+        print(f"Similarity Score: {score:.4f}")
+        print(doc.page_content[:600])
         print("-" * 50)
 
 

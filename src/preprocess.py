@@ -14,4 +14,4 @@ print("Vector store loaded successfully.")
 """ print(f"Total chunks: {len(chunks)}")
 print(type(chunks))
 for i, chunk in enumerate(chunks[:3]):
-    print(f"\nChunk {i} content:\n", chunk.page_content[:300])  """
+    print(f"\nChunk {i} content:\n", chunk.page_content[:300])   """
