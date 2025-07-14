@@ -1,0 +1,13 @@
+langchain
+faiss-cpu
+chromadb
+sentence-transformers
+openai
+pandas
+numpy
+scipy
+pulp
+cvxpy
+streamlit
+gradio
+python-dotenv
