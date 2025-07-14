@@ -6,7 +6,7 @@ from config import embedding_function
 
 def retrieved_docs(query):
     vectordb = Chroma(persist_directory="db", embedding_function=embedding_function)
-    retrieved_docs = vectordb.similarity_search_with_relevance_scores(query, k=3)
+    retrieved_docs = vectordb.similarity_search_with_relevance_scores(query, k=15)
     for doc, score in retrieved_docs:
         print(f"Relevance Score: {score:.4f}")
         print(doc.page_content[:300])
